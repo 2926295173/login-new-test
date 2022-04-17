@@ -23,7 +23,7 @@
 -keep public class com.tencent.bugly.**{*;}
 -keep class android.support.**{*;}
 -keep public class top.codestory.login_new_test.R$*{
-      publicstaticfinalint*;
+      public static final int *;
 }
 -keep class com.umeng.** { *; }
 

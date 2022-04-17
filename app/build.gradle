@@ -13,8 +13,8 @@ android {
         applicationId "top.codestory.login_new_test"
         minSdk 29
         targetSdk 32
-        versionCode 4
-        versionName "1.02"
+        versionCode 5
+        versionName "1.03"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
