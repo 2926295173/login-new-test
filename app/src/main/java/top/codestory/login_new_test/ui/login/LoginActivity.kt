@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.tencent.bugly.Bugly
+import com.umeng.commonsdk.UMConfigure
 import top.codestory.login_new_test.R
 import top.codestory.login_new_test.databinding.ActivityLoginBinding
 
@@ -26,7 +27,24 @@ class LoginActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         Bugly.init(applicationContext, "964e638e95", true);
-
+        /**
+         * 注意: 即使您已经在AndroidManifest.xml中配置过appkey和channel值，也需要在App代码中调
+         * 用初始化接口（如需要使用AndroidManifest.xml中配置好的appkey和channel值，
+         * UMConfigure.init调用中appkey和channel参数请置为null）。
+         */
+        //UMConfigure.init(this, "您的appkey", "GITHUB", UMConfigure.DEVICE_TYPE_PHONE, "");
+        UMConfigure.init(
+            applicationContext,
+            "625b9451d024421570bd739e",
+            "GITHUB",
+            UMConfigure.DEVICE_TYPE_PHONE,
+            ""
+        )
+        /**
+         *设置组件化的Log开关
+         *参数: boolean 默认为false，如需查看LOG设置为true
+         */
+        UMConfigure.setLogEnabled(true);
         //CrashReport.initCrashReport(applicationContext, "964e638e95", true);
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
