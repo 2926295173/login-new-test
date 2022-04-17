@@ -50,6 +50,11 @@ android {
 dependencies {
     implementation 'com.tencent.bugly:crashreport_upgrade:1.5.23'
 //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+// 友盟基础组件库（所有友盟业务SDK都依赖基础组件库）
+    implementation  'com.umeng.umsdk:common:9.4.7'// (必选)
+    implementation  'com.umeng.umsdk:asms:1.5.0'// 必选
+
+    implementation 'com.umeng.umsdk:apm:1.6.2'// U-APM产品包依赖(必选)
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'

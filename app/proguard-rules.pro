@@ -22,3 +22,19 @@
 -dontwarn com.tencent.bugly.**
 -keep public class com.tencent.bugly.**{*;}
 -keep class android.support.**{*;}
+-keep public class top.codestory.login_new_test.R$*{
+      publicstaticfinalint*;
+}
+-keep class com.umeng.** { *; }
+
+-keep class com.uc.** { *; }
+
+-keep class com.efs.** { *; }
+
+-keepclassmembers class *{
+     public<init>(org.json.JSONObject);
+}
+-keepclassmembers enum *{
+      publicstatic**[] values();
+      publicstatic** valueOf(java.lang.String);
+}
