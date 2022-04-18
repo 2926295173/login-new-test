@@ -26,6 +26,10 @@ class LoginActivity : AppCompatActivity() {
 
 
         super.onCreate(savedInstanceState)
+        UMConfigure.setLogEnabled(true);
+
+        UMConfigure.preInit(applicationContext,"625b9451d024421570bd739e","GITHUB");
+
         Bugly.init(applicationContext, "964e638e95", true);
         /**
          * 注意: 即使您已经在AndroidManifest.xml中配置过appkey和channel值，也需要在App代码中调
@@ -44,7 +48,6 @@ class LoginActivity : AppCompatActivity() {
          *设置组件化的Log开关
          *参数: boolean 默认为false，如需查看LOG设置为true
          */
-        UMConfigure.setLogEnabled(true);
         //CrashReport.initCrashReport(applicationContext, "964e638e95", true);
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
